@@ -1,6 +1,3 @@
-.site-footer {
-    background-color:azure;
-}
 
 .container {
     max-width: 1200px;
@@ -12,8 +9,6 @@
 
 .footer-copyright {
     text-align: center;
-    background-color: rgb(228, 235, 235);
-    background-image: linear-gradient(round);
 }
 h2 {
 
@@ -22,7 +17,8 @@ h2 {
 
 .signature {
     font-weight: bold;
-    font-size:x-large;    
+    font-size:x-small;    
     color: rgb(0, 0, 0);
 
 }
+.
