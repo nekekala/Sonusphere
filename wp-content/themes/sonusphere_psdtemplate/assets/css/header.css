@@ -1,0 +1,50 @@
+	
+.site-header {
+    padding: 20px 0;
+}
+.header-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.site-name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 44px;
+}
+.logo {
+        border-radius: 50%;
+}
+
+.logo img {
+    border-radius: 50%; /* This makes the image round */
+    width: 180px; /* Adjust the width as needed */
+    height: 180px; /* Maintain aspect ratio */
+}
+
+.site-title,
+.site-description {
+    margin: 0;
+}
+
+
+.site-title {
+    font-size: 50px;
+    font-style: oblique;
+    
+}
+*/
+.site-description {
+    font-size: 16px;
+}

@@ -1,0 +1,28 @@
+.site-footer {
+    background-color:azure;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+
+.footer-copyright {
+    text-align: center;
+    background-color: rgb(228, 235, 235);
+    background-image: linear-gradient(round);
+}
+h2 {
+
+    color: rgb(37, 15, 115);
+}
+
+.signature {
+    font-weight: bold;
+    font-size:x-large;    
+    color: rgb(0, 0, 0);
+
+}
