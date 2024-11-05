@@ -21,3 +21,6 @@ h2 {
     color: rgb(0, 0, 0);
 
 }
+.social-media-icons{
+    align-self: flex-end;
+}
