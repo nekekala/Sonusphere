@@ -24,7 +24,7 @@
 		<div id="app">
 			<header class="site-header">
 			    <div class="header-background" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/header_background.jpg');">
-        			<div class="container">
+        			<div class="logo-container">
 						<div class="site-name">
 							<div class="logo">
 								<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
