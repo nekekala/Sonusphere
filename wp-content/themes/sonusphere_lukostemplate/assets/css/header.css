@@ -31,6 +31,9 @@
 }
 
 @media (max-width:768px) {
+    .site-header {
+        padding: 0 0;
+    }
     .background-image  {
         transform: scale(0.75);
     }
@@ -45,6 +48,9 @@
 }
 
 @media (max-width:430px) {
+    .site-header {
+        padding: 0 0;
+    }
     .background-image  {
         transform: scale(0.5);
     }
