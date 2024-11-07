@@ -14,7 +14,10 @@
 				</div>
 				<div class="social-media-icons">
 					<a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-					<a href="https://soundcloud.com/" target="_blank" class="social-icon"><i class="fa-brands fa-soundcloud"></i></a>			
+					<a href="https://soundcloud.com/" target="_blank" class="social-icon"><i class="fa-brands fa-soundcloud" style="color: #f59b00;"></i></a>			
+					<a href="https://www.youtube.com/" target="_blank" class="social-icon"><i class="fa-brands fa-youtube" style="color: #da2f10;"></i></a>			
+
+					
 				</div>
 			</div>
 			
