@@ -5,28 +5,19 @@
 ?>
 
 		<footer class="site-footer">
-			<div class="container">
+			<div class="footer-container">
 				<div class="footer-content">
 					<h3>Sonusphere</h3>
 					<p>Group based in Berlin, Germany<br>
 					Email: info@example.com<br>
 					Phone: +1234567890</p>
 				</div>
+				<div class="social-media-icons">
+					<a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+					<a href="https://soundcloud.com/" target="_blank" class="social-icon"><i class="fa-brands fa-soundcloud"></i></a>			
+				</div>
 			</div>
-			<div class="social-media-icons">
-				<a href="https://facebook.com/yourpage" target="_blank">
-					<i class="fa fa-facebook"></i> <!-- Font Awesome Facebook icon -->
-				</a>
-				<a href="https://twitter.com/yourpage" target="_blank">
-					<i class="fa fa-twitter"></i> <!-- Font Awesome Twitter icon -->
-				</a>
-				<a href="https://instagram.com/yourpage" target="_blank">
-					<i class="fa fa-instagram"></i> <!-- Font Awesome Instagram icon -->
-				</a>
-				<a href="https://linkedin.com/in/yourprofile" target="_blank">
-					<i class="fa fa-linkedin"></i> <!-- Font Awesome LinkedIn icon -->
-				</a>
-			</div>
+			
 			<div class="footer-copyright">
 				<span class= "signature">Developed by <a href="https:/www.linkedin.com/in/grigorispoulos" rel="Neke Kala"> Neke Kala</a> - Creative Commons</span>
 			</div>
