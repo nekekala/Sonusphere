@@ -5,6 +5,7 @@
     justify-items: left;
 }
 
+/*The backgroung picture format*/
 .header-background {
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,19 +18,20 @@
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: left;
     max-width: 100%;
     margin: 0 auto;   
     height: 100%;
     gap: 5vw;
 }
 
+/*styling the logo img*/
 .logo img {
     border-radius: 50%; /* This makes the image round */
     width: 13vw; /* Adjust the width of the logo as needed for different screen sizes*/
     height: auto; /* Maintain aspect ratio */
 }
 
+/*The title "Sonusphere" of our site*/
 .description {
     font-size: 3vw;
     width: 30vw; /* Adjust the width of the title for different screen sizes */

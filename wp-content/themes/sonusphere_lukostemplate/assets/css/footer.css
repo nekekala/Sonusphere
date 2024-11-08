@@ -1,37 +1,32 @@
+/* Our footer CSS, arranging the group's information, inserting social media icon links and info about the developer*/
 
+ /*the main footer div*/
 .footer-container {
     display: flex;
     max-width: 1200px;
     height: 100%;
     border-top: 1px solid #000; 
     border-bottom: 1px solid #000; 
-    padding: 0 20px;
-        
-}
-.social-media-icons{
-    margin-left: auto;
-    margin-bottom: auto;
-    margin-top: 20px;
-    display: flex;
-    font-size:larger;
-    gap: 20px;
+    padding: 0 2vw; 
+    font-size: 2vw;       
 }
 
+/*arranging the social media icons from font awesome*/
+.social-media-icons{
+    display: flex;
+    align-self: flex-end;
+    margin: 3vw 0 auto auto;
+    font-size: 2vw;
+    gap: 2vw;
+}
 
 .footer-copyright {
     text-align: center;
 }
-h2 {
 
-    color: rgb(37, 15, 115);
-}
-
+/*styling developer's information*/
 .signature {
     font-weight: bold;
-    font-size:x-small;    
+    font-size:1.2vw;    
     color: rgb(0, 0, 0);
-
-}
-.social-media-icons{
-    align-self: flex-end;
 }
