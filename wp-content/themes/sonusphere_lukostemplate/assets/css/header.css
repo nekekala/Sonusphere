@@ -34,6 +34,7 @@
 /*The title "Sonusphere" of our site*/
 .description {
     font-size: 3vw;
+    font-family: 'Times New Roman', Times, serif;
     width: 30vw; /* Adjust the width of the title for different screen sizes */
     height: auto; /* Maintain aspect ratio */
 }
