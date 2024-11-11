@@ -3,12 +3,11 @@
  /*the main footer div*/
 .footer-container {
     display: flex;
-    max-width: 1200px;
     height: 100%;
     border-top: 1px solid #000; 
     border-bottom: 1px solid #000; 
     padding: 0 2vw; 
-    font-size: 2vw;       
+    font-size: 3.5vw;       
 }
 
 /*arranging the social media icons from font awesome*/
@@ -16,10 +15,29 @@
     display: flex;
     align-self: flex-end;
     margin: 3vw 0 auto auto;
-    font-size: 2vw;
+    font-size: 3.5vw;
     gap: 2vw;
 }
 
+/*na ftiakso ta @media gia to responsive*/
+@media (max-width: 1280px){
+    .social-media-icons, .footer-container{
+        font-size: 2vw;
+    }
+
+}
+
+@media (max-width: 1024px){
+    
+}
+
+@media (max-width: 768px){
+    
+}
+
+@media (max-width: 480px){
+    
+}
 .footer-copyright {
     text-align: center;
 }
@@ -27,6 +45,6 @@
 /*styling developer's information*/
 .signature {
     font-weight: bold;
-    font-size:1.2vw;    
+    font-size:2vw;    
     color: rgb(0, 0, 0);
 }
