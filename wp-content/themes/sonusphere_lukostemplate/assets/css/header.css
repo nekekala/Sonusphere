@@ -1,7 +1,6 @@
 /*Our header CSS, styling the logo, the title of the site and an coloctrical background picture*/
 
 .site-header {
-    min-height:100%;
     justify-items: left;
 }
 
@@ -18,12 +17,13 @@
 .logo-container {
     display: flex;
     align-items: center;
-    max-width: 100%;
     margin: 0 auto;   
-    height: 100%;
     gap: 5vw;
 }
 
+.logo{
+    padding-left: 20px;
+}
 /*styling the logo img*/
 .logo img {
     border-radius: 50%; /* This makes the image round */
