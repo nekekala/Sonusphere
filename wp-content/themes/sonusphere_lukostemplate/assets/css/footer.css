@@ -7,36 +7,72 @@
     border-top: 1px solid #000; 
     border-bottom: 1px solid #000; 
     padding: 0 2vw; 
-    font-size: 3.5vw;       
 }
 
 /*arranging the social media icons from font awesome*/
 .social-media-icons{
     display: flex;
     align-self: flex-end;
-    margin: 3vw 0 auto auto;
-    font-size: 3.5vw;
-    gap: 2vw;
+    margin: 20px 0 auto auto;
+    gap: 15px;
 }
 
 /*na ftiakso ta @media gia to responsive*/
-@media (max-width: 1280px){
-    .social-media-icons, .footer-container{
-        font-size: 2vw;
+@media (max-width: 2560px){
+    .footer-container{
+        font-size: 55px;
     }
+    .social-media-icons{
+        font-size: 55px;
+        margin: 55px 20px auto auto;
+        gap: 55px;
+    }
+    .footer-copyright{
+        font-size: 45px;
+    }    
 
 }
 
 @media (max-width: 1024px){
-    
+    .footer-container{
+        font-size: 30px;
+    }
+    .social-media-icons{
+        font-size: 45px;
+        margin: 40px 0 auto auto;
+        gap: 45px;
+    }
+    .footer-copyright{
+        font-size: 35px;
+    }    
 }
 
 @media (max-width: 768px){
-    
+    .footer-container{
+        font-size: 25px;
+    }
+    .social-media-icons{
+        font-size: 35px;
+        margin: 20px 0 auto auto;
+        gap: 30px;
+    }
+    .footer-copyright{
+        font-size: 25px;
+    }    
 }
 
 @media (max-width: 480px){
-    
+    .footer-container{
+        font-size: 15px;
+    }
+    .social-media-icons{
+        font-size: 20px;
+        margin: 20px 0 auto auto;
+        gap: 15px;
+    }
+    .footer-copyright{
+        font-size: 20px;
+    }
 }
 .footer-copyright {
     text-align: center;
