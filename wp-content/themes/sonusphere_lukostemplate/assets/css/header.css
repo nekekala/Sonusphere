@@ -38,3 +38,15 @@
     width: 30vw; /* Adjust the width of the title for different screen sizes */
     height: auto; /* Maintain aspect ratio */
 }
+
+.menu {
+    list-style: none ;
+    background-color:#f4f4f4;
+    width: 100%;
+    padding: 1px 0 1px 0;
+    
+    transition: color 0.3s, background-color 0.3s;
+}
+.menu a {
+    list-style: none;
+}
