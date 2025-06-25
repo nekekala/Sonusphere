@@ -35,12 +35,7 @@
 						</div>
 				</div>
 			</div>
-		<!-- Add Menu  -->
-		<?php 
-			wp_nav_menu( array(
-				'menu' => 'Main menu'
-			) );
-		?>
+		
 		</header>
 	</body>
 </div>
