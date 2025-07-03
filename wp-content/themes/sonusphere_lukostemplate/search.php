@@ -9,7 +9,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) { ?>
 
 		<?php // phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment ?>
-		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'psdtheme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'lukostempl' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 
 		<?php
 		while ( have_posts() ) {

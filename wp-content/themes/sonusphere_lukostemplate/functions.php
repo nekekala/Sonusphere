@@ -9,14 +9,14 @@ define( 'DISABLE_JQUERY_MIGRATE', true );
 define( 'DISABLE_BLOCK_STYLES', true );
 define( 'DISABLE_UNUSED_CF7', true );
 
-if ( ! function_exists( 'psdtheme_setup' ) ) :
-	function psdtheme_setup() {
+if ( ! function_exists( 'lukostempl_setup' ) ) :
+	function lukostempl_setup() {
 
 		// Add RSS feed links to <head> for posts and comments.
 		add_theme_support( 'automatic-feed-links' );
 
 		//translations
-		load_theme_textdomain( 'psdtheme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'lukostempl', get_template_directory() . '/languages' );
 
 		// Enable support for Post Thumbnails, and declare two sizes.
 		add_theme_support( 'post-thumbnails' );
@@ -27,7 +27,7 @@ if ( ! function_exists( 'psdtheme_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary' => __( 'Primary menu', 'psdtheme' ),
+				'primary' => __( 'Primary menu', 'lukostempl' ),
 			)
 		);
 
@@ -41,13 +41,13 @@ if ( ! function_exists( 'psdtheme_setup' ) ) :
 
 	}
 endif;
-add_action( 'after_setup_theme', 'psdtheme_setup' );
+add_action( 'after_setup_theme', 'lukostempl_setup' );
 /**********************************************************************/
 
 /**
  * Include scripts and styles
  */
-function psdtheme_setup_scripts() {
+function lukostempl_setup_scripts() {
 	$version = wp_get_theme( get_template() )->get( 'Version' );
 	if ( SETUP_ENV === 'DEVELOPMENT' ) {
 		$version = time();
@@ -55,17 +55,17 @@ function psdtheme_setup_scripts() {
 
 	// Load our main stylesheet.
 	if ( SETUP_ENV === 'DEVELOPMENT' ) {
-		wp_enqueue_style( 'psdtheme-vendor', get_template_directory_uri() . '/assets/css/header.css', array(), $version );
-		wp_enqueue_style( 'psdtheme-main', get_template_directory_uri() . '/assets/css/footer.css', array(), $version );
+		wp_enqueue_style( 'lukostempl-vendor', get_template_directory_uri() . '/assets/css/header.css', array(), $version );
+		wp_enqueue_style( 'lukostempl-main', get_template_directory_uri() . '/assets/css/footer.css', array(), $version );
 	} else {
-		wp_enqueue_style( 'psdtheme-vendor', get_template_directory_uri() . '/css/vendor.min.css', array(), $version );
-		wp_enqueue_style( 'psdtheme-main', get_template_directory_uri() . '/css/bundle.min.css', array( 'psdtheme-vendor' ), $version );
+		wp_enqueue_style( 'lukostempl-vendor', get_template_directory_uri() . '/css/vendor.min.css', array(), $version );
+		wp_enqueue_style( 'lukostempl-main', get_template_directory_uri() . '/css/bundle.min.css', array( 'lukostempl-vendor' ), $version );
 	}
 
-	/*// Load our scripts
-	wp_enqueue_script( 'psdtheme-vendor', get_template_directory_uri() . '/js/vendor.js', array( 'jquery' ), $version, true );
-	wp_enqueue_script( 'psdtheme-main', get_template_directory_uri() . '/js/app.js', array( 'jquery', 'psdtheme-vendor' ), $version, true );
-*/
+	// Load our scripts
+	wp_enqueue_script( 'lukostempl-vendor', get_template_directory_uri() . '/js/vendor.js', array( 'jquery' ), $version, true );
+	wp_enqueue_script( 'lukostempl-main', get_template_directory_uri() . '/js/app.js', array( 'jquery', 'lukostempl-vendor' ), $version, true );
+
 	// Since we use classic editor we don't need gutenberg stuff
 	if ( DISABLE_BLOCK_STYLES ) {
 		wp_dequeue_style( 'wp-block-library' );
@@ -78,7 +78,7 @@ function psdtheme_setup_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'psdtheme_setup_scripts' );
+add_action( 'wp_enqueue_scripts', 'lukostempl_setup_scripts' );
 /**********************************************************************/
 
 /**
@@ -100,7 +100,7 @@ add_action( 'wp_default_scripts', 'dequeue_jquery_migrate' );
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  */
-function psdtheme_content_width() {
+function lukostempl_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
@@ -110,7 +110,7 @@ function psdtheme_content_width() {
 
 	$GLOBALS['content_width'] = $content_width;
 }
-add_action( 'after_setup_theme', 'psdtheme_content_width', 0 );
+add_action( 'after_setup_theme', 'lukostempl_content_width', 0 );
 /**********************************************************************/
 
 /**
@@ -126,7 +126,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 /**
  * Register Sidebars
  */
-function psdtheme_widgets_init() {
+function lukostempl_widgets_init() {
 	// Primary Widget area
 	register_sidebar(
 		array(
@@ -141,7 +141,7 @@ function psdtheme_widgets_init() {
 	);
 
 }
-add_action( 'widgets_init', 'psdtheme_widgets_init' );
+add_action( 'widgets_init', 'lukostempl_widgets_init' );
 
 
 // Remove update notification for custom parent theme

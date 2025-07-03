@@ -8,7 +8,7 @@ get_header(); ?>
 <h1 class="page-title">
 <?php
 	// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-	printf( esc_html__( 'Category Archives: %s', 'psdtheme' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+	printf( esc_html__( 'Category Archives: %s', 'lukostempl' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 ?>
 </h1>
 <?php
