@@ -9,6 +9,10 @@ define( 'DISABLE_JQUERY_MIGRATE', true );
 define( 'DISABLE_BLOCK_STYLES', true );
 define( 'DISABLE_UNUSED_CF7', true );
 
+// === YouTube Video Import Settings ===
+define('LUKOSTEMPL_YOUTUBE_API_KEY', 'AIzaSyDxr2ipM9Z3wQLUhfnhl6NSSEVVVFKLevo'); // <-- Replace with your API key
+define('LUKOSTEMPL_YOUTUBE_CHANNEL_ID', 'UCkQK2rQk1vQ1U6jLwQ1Q1Q1Q'); // <-- Replace with your channel ID
+
 if ( ! function_exists( 'lukostempl_setup' ) ) :
 	function lukostempl_setup() {
 
@@ -161,3 +165,55 @@ require_once __DIR__ . '/includes/helpers.php';
 // require_once __DIR__ . '/includes/shortcodes.php';
 // require_once __DIR__ . '/includes/ajax-handlers.php';
 // require_once __DIR__ . '/includes/misc.php';
+
+// === Schedule YouTube Video Import ===
+if (!wp_next_scheduled('lukostempl_import_youtube_videos_event')) {
+    wp_schedule_event(time(), 'hourly', 'lukostempl_import_youtube_videos_event');
+}
+add_action('lukostempl_import_youtube_videos_event', 'lukostempl_import_youtube_videos');
+
+// === Import YouTube Videos Function ===
+function lukostempl_import_youtube_videos() {
+    $api_key = LUKOSTEMPL_YOUTUBE_API_KEY;
+    $channel_id = LUKOSTEMPL_YOUTUBE_CHANNEL_ID;
+    $max_results = 10;
+    $api_url = "https://www.googleapis.com/youtube/v3/search?key={$api_key}&channelId={$channel_id}&part=snippet,id&order=date&maxResults={$max_results}";
+    $response = wp_remote_get($api_url);
+    if (is_wp_error($response)) return;
+    $body = wp_remote_retrieve_body($response);
+    $data = json_decode($body);
+    if (empty($data->items)) return;
+    foreach ($data->items as $item) {
+        if ($item->id->kind !== 'youtube#video') continue;
+        $video_id = $item->id->videoId;
+        $title = $item->snippet->title;
+        $description = $item->snippet->description;
+        $thumbnail = $item->snippet->thumbnails->high->url;
+        // Check if video already exists
+        $existing = get_posts([
+            'post_type' => 'youtube_video',
+            'meta_key' => 'lukostempl_youtube_video_id',
+            'meta_value' => $video_id,
+            'posts_per_page' => 1
+        ]);
+        if ($existing) {
+            $post_id = $existing[0]->ID;
+            wp_update_post([
+                'ID' => $post_id,
+                'post_title' => $title,
+                'post_content' => $description
+            ]);
+        } else {
+            $post_id = wp_insert_post([
+                'post_type' => 'youtube_video',
+                'post_title' => $title,
+                'post_content' => $description,
+                'post_status' => 'publish'
+            ]);
+            if ($post_id && !is_wp_error($post_id)) {
+                update_post_meta($post_id, 'lukostempl_youtube_video_id', $video_id);
+                update_post_meta($post_id, 'lukostempl_youtube_thumbnail', $thumbnail);
+            }
+        }
+    }
+}

@@ -29,4 +29,6 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </div>
 
 <?php
+echo do_shortcode('[lukostempl_youtube_videos count="4"]');
 get_footer();
+?>
