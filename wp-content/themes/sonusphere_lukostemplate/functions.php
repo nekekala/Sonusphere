@@ -9,18 +9,12 @@ define( 'DISABLE_JQUERY_MIGRATE', true );
 define( 'DISABLE_BLOCK_STYLES', true );
 define( 'DISABLE_UNUSED_CF7', true );
 
-<<<<<<< HEAD
 // === YouTube Video Import Settings ===
 define('LUKOSTEMPL_YOUTUBE_API_KEY', 'AIzaSyDxr2ipM9Z3wQLUhfnhl6NSSEVVVFKLevo'); // <-- Replace with your API key
 define('LUKOSTEMPL_YOUTUBE_CHANNEL_ID', 'UCkQK2rQk1vQ1U6jLwQ1Q1Q1Q'); // <-- Replace with your channel ID
 
 if ( ! function_exists( 'lukostempl_setup' ) ) :
 	function lukostempl_setup() {
-=======
-if ( ! function_exists( 'psdtheme_setup' ) ) :
-	function psdtheme_setup() {
->>>>>>> parent of 8ad1d2a (renaming Template)
-
 		// Add RSS feed links to <head> for posts and comments.
 		add_theme_support( 'automatic-feed-links' );
 
