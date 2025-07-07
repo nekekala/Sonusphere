@@ -25,20 +25,20 @@ if ( have_posts() ) {
 		<?php if ( is_day() ) : ?>
 			<?php
 				// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-				printf( esc_html__( 'Daily Archives: <span>%s</span>', 'lukostempl' ), get_the_date() );
+				printf( esc_html__( 'Daily Archives: <span>%s</span>', 'psdtheme' ), get_the_date() );
 			?>
 		<?php elseif ( is_month() ) : ?>
 			<?php
 				// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-				printf( esc_html__( 'Monthly Archives: <span>%s</span>', 'lukostempl' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'lukostempl' ) ) );
+				printf( esc_html__( 'Monthly Archives: <span>%s</span>', 'psdtheme' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'psdtheme' ) ) );
 			?>
 		<?php elseif ( is_year() ) : ?>
 			<?php
 				// phpcs:ignore WordPress.WP.I18n.MissingTranslatorsComment
-				printf( esc_html__( 'Yearly Archives: <span>%s</span>', 'lukostempl' ), get_the_date( _x( 'Y', 'yearly archives date format', 'lukostempl' ) ) );
+				printf( esc_html__( 'Yearly Archives: <span>%s</span>', 'psdtheme' ), get_the_date( _x( 'Y', 'yearly archives date format', 'psdtheme' ) ) );
 			?>
 		<?php else : ?>
-			<?php echo esc_html__( 'Blog Archives', 'lukostempl' ); ?>
+			<?php echo esc_html__( 'Blog Archives', 'psdtheme' ); ?>
 		<?php endif; ?>
 	</h1>
 
